@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="toggle-container">
+        <label>
+            <input type="checkbox">
+            <div class="circle"></div>
+        </label>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        background: #ced0e2;
+    }
+    :root{
+    --toggle-switch-bg: #232428;
+    --toggle-border: #232428;
+    --toggle-bg: #fff;
+    }
+    .toggle-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    input{
+        display: none;
+    }
+    label{
+        height: 50px;
+        width: 100px;
+        background-color: var(--toggle-bg);
+        border-radius: 40px;
+        border: 3px solid var(--toggle-border);
+        padding: .25em;
+        cursor: pointer;
+    }
+    .circle{
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        border-radius: 50%;
+        transition: all 0.5s;
+        
+        
+    }
+    input:checked ~ .circle{
+        transform: translatex(calc(100px - 50px));
+    }
+
+</style>
+</html>
